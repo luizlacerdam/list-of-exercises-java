@@ -17,6 +17,10 @@ public class SmartHouse {
         lampadaLigada = false;
     }
 
+    public boolean isLampadaLigada() {
+        return lampadaLigada;
+    }
+
     public boolean conectarInternet() {
         for (int i = 0; i < 3; i++) {
             System.out.println("Tentando conectar à internet...");
