@@ -1,11 +1,37 @@
 package com.trybe.java;
 
+import java.util.HashMap;
+
 /**
  * Classe.
  **/
 
 public class SmartHouse {
     public boolean lampadaLigada = false;
+    private House house;
+    public HashMap<String, String> estadosBrasileiros = new HashMap<String, String>();
+
+    public SmartHouse() {
+        this.house = null;
+        estadosBrasileiros.put("SP", "São Paulo");
+        estadosBrasileiros.put("RJ", "Rio de Janeiro");
+        estadosBrasileiros.put("MG", "Minas Gerais");
+        estadosBrasileiros.put("PE", "Pernambuco");
+        estadosBrasileiros.put("SC", "Santa Catarina");
+        estadosBrasileiros.put("AM", "Amazonas");
+    }
+
+    public House getHouse() {
+        return this.house;
+    }
+
+    public void setHouse(House house) {
+        this.house = house;
+    }
+
+    public String mostraNomeEstado(String sigla) {
+        return estadosBrasileiros.get(sigla);
+    }
 
     public void ligarLampada() {
         System.out.println("Ligando a lâmpada...");

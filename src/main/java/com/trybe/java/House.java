@@ -41,7 +41,7 @@ public class House {
         this.altura = altura;
     }
 
-    public double calcularImc() {
+    public double calculaImc() {
         return this.peso / (this.altura * this.altura);
     }
 }
