@@ -32,4 +32,16 @@ public class House {
     public double getAltura() {
         return this.altura;
     }
+
+    public void setPeso(double peso) {
+        this.peso = peso;
+    }
+
+    public void setAltura(double altura) {
+        this.altura = altura;
+    }
+
+    public double calcularImc() {
+        return this.peso / (this.altura * this.altura);
+    }
 }
